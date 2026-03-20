@@ -30,12 +30,3 @@ root_agent = Agent(
     instruction=SYSTEM_PROMPT,
     tools=[google_search],
 )
-```
-
-Scroll down → click **"Commit changes"**
-
-**3. Create the second file — click "Add file" → "Create new file"**
-
-Filename:
-```
-rwanda_legal_agent/__init__.py
