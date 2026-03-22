@@ -32,39 +32,3 @@ if prompt := st.chat_input("Ask a legal question..."):
         response = model.generate_content(full_prompt)
         st.markdown(response.text)
         st.session_state.messages.append({"role": "assistant", "content": response.text})
-```
-
-Click **"Commit changes"**
-
----
-
-**Step 2 — Add `requirements.txt` on GitHub**
-
-Click **"Add file"** → **"Create new file"**
-
-Filename:
-```
-requirements.txt
-```
-
-Content:
-```
-streamlit
-google-generativeai
-```
-
-Click **"Commit changes"**
-
----
-
-**Step 3 — Deploy on Streamlit Cloud**
-
-1. Go to `https://streamlit.io/cloud`
-2. Click **"Sign in"** → sign in with your **GitHub account**
-3. Click **"New app"**
-4. Select your repo `gracekitonyi-bit/rwandalegal-ai`
-5. Branch: `main`
-6. Main file: `app.py`
-7. Click **"Advanced settings"** → under **Secrets** paste:
-```
-GOOGLE_API_KEY = "your_personal_gmail_key"
